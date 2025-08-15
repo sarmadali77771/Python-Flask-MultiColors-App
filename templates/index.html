@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Changing Page</title>
+    <meta http-equiv="refresh" content="5">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            background-color: {{ bg_color }};
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Background Color Changer</h1>
+        <p>Page will refresh every 5 seconds with a new color</p>
+        <p>Current color: {{ bg_color }}</p>
+    </div>
+</body>
+</html>
