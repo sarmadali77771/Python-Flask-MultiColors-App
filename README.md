@@ -24,7 +24,15 @@ A simple web application that displays a page with a randomly changing backgroun
 
 2. Build Docker image:
    ```bash
+   #To build image by single stage file name Dockerfile 
    docker build -t multicolors-app .
+
+   OR
+
+   #To run app with multi stage file name Dockerfile_multiStage
+   docker build -f Dockerfile_multiStage -t multicolors-app-mini
+
+   
 
 3. Run the container:
    ```bash
