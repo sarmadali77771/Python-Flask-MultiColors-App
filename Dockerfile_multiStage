@@ -1,0 +1,28 @@
+#stage:1 build stage
+FROM python:3.9-slim AS build_stage
+
+WORKDIR /multicolors-app
+
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt --target=/multicolors-app/deps
+
+
+COPY . .
+
+#stage:2 copy only code and deps from stage1 - no distro in this stage
+
+FROM gcr.io/distroless/python3-debian12
+
+WORKDIR /app
+
+COPY --from=build_stage /multicolors-app/deps /app/deps 
+
+COPY --from=build_stage /multicolors-app .
+
+ENV PYTHONPATH="/app/deps"
+
+EXPOSE 5000
+
+CMD ["app.py"]
+
