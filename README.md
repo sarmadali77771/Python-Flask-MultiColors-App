@@ -2,6 +2,9 @@
 
 A simple web application that displays a page with a randomly changing background color every 5 seconds.
 
+![Project Demo](https://media.licdn.com/dms/image/v2/D4D22AQE5bEPFquUO9Q/feedshare-shrink_2048_1536/B4DZizD1DSGgAo-/0/1755350782880?e=1758153600&v=beta&t=XegCOuLugIIHT29sf9je434dhmpRWuXFdadH9VqgCXo)
+
+
 ## Features
 
 - Random background color generation on each page refresh
